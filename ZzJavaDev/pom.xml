@@ -7,6 +7,7 @@
     <artifactId>ZzJavaDev</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <name>ZzJavaDev Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
