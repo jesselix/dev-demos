@@ -1,2 +1,2 @@
-# zz-java-dev
-Java Development Tools and Demos
+# ZzJavaDev
+Java Development Knowledge and Tools
