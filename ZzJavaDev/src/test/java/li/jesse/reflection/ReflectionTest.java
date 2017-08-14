@@ -1,4 +1,4 @@
-package li.jesse;
+package li.jesse.reflection;
 
 import li.jesse.entity.Animal;
 import li.jesse.entity.User;
@@ -29,7 +29,7 @@ public class ReflectionTest implements Serializable
         Class<?> clazz2;
         Class<?> clazz3;
 
-        clazz1 = Class.forName("li.jesse.ReflectionTest");
+        clazz1 = Class.forName("li.jesse.reflection.ReflectionTest");
         clazz2 = new ReflectionTest().getClass();
         clazz3 = ReflectionTest.class;
 
@@ -42,7 +42,7 @@ public class ReflectionTest implements Serializable
     @Test
     public void testGetTheParentClassAndInterfaceOfAnObject() throws ClassNotFoundException
     {
-        Class<?> clazz = Class.forName("li.jesse.ReflectionTest");
+        Class<?> clazz = Class.forName("li.jesse.reflection.ReflectionTest");
         Class<?> parentClazz = clazz.getSuperclass();
         System.out.println(parentClazz.getName());
 

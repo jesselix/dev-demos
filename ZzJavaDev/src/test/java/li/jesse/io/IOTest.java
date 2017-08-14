@@ -1,4 +1,4 @@
-package li.jesse;
+package li.jesse.io;
 
 // http://ifeve.com/java-io/
 // https://www.ibm.com/developerworks/cn/java/j-lo-javaio/
@@ -50,7 +50,7 @@ public class IOTest
     {
         BufferedReader in = new BufferedReader(new FileReader(fileName));
 
-        String s = null;
+        String s;
         StringBuilder sb = new StringBuilder();
 
         while ((s = in.readLine()) != null)
