@@ -1,4 +1,4 @@
-package li.jesse.thread;
+package li.jesse.concurrency;
 
 public class MyThread extends Thread
 {
