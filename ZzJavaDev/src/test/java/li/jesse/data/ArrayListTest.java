@@ -1,4 +1,4 @@
-package li.jesse.basic;
+package li.jesse.data;
 
 public class ArrayListTest
 {
