@@ -37,41 +37,41 @@ public class LinkedListTest
         System.out.println(linkedList);
     }
 
-    @Test
-    public void testLinkedListAsStack()
-    {
-        LinkedListAsStack stack = new LinkedListAsStack();
+//    @Test
+//    public void testLinkedListAsStack()
+//    {
+//        LinkedListAsStack stack = new LinkedListAsStack();
+//
+//        for (int i = 0; i < 10; i++)
+//        {
+//            stack.push(i);
+//        }
+//
+//        stack.printFromTopToBottom();
+//        System.out.println();
+//
+//        stack.pop();
+//        stack.pop();
+//
+//        stack.printFromTopToBottom();
+//    }
 
-        for (int i = 0; i < 10; i++)
-        {
-            stack.push(i);
-        }
-
-        stack.printFromTopToBottom();
-        System.out.println();
-
-        stack.pop();
-        stack.pop();
-
-        stack.printFromTopToBottom();
-    }
-
-    @Test
-    public void testLinkedListAsQueue()
-    {
-        LinkedListAsQueue queue = new LinkedListAsQueue();
-
-        for (int i = 0; i < 10; i++)
-        {
-            queue.put(i);
-        }
-
-        queue.print();
-        System.out.println();
-
-        queue.get();
-        queue.get();
-
-        queue.print();
-    }
+//    @Test
+//    public void testLinkedListAsQueue()
+//    {
+//        LinkedListAsQueue queue = new LinkedListAsQueue();
+//
+//        for (int i = 0; i < 10; i++)
+//        {
+//            queue.put(i);
+//        }
+//
+//        queue.print();
+//        System.out.println();
+//
+//        queue.get();
+//        queue.get();
+//
+//        queue.print();
+//    }
 }
