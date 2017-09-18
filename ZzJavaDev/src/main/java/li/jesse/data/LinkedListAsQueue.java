@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 public class LinkedListAsQueue
 {
+    // --
     private LinkedList linkedList = new LinkedList();
 
     public void put(Object o)
