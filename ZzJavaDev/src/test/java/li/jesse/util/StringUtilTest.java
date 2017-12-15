@@ -11,4 +11,12 @@ public class StringUtilTest {
         String bb = StringUtil.commentSeparator("Hello World", '-', 10);
         System.out.println(bb);
     }
+
+    @Test
+    public void testCommentBox() {
+        String aa = StringUtil.commentBox("@!", '*', 8);
+        System.out.println(aa);
+        String bb = StringUtil.commentBox("Hello World", '-', 8);
+        System.out.println(bb);
+    }
 }
