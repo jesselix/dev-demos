@@ -3,9 +3,9 @@ package li.jesse.util;
 public class StringUtil {
 
 
-    public static String commentSeparator(String title, String separatorElement, int maxEachSideCount) {
+    public static String commentSeparator(String title, Character separatorElement, int maxEachSideCount) {
         int titleLength = title.length();
-        if (titleLength == 0 || title == null || separatorElement.length() == 0 || separatorElement == null) {
+        if (titleLength == 0 || title == null  || separatorElement == null) {
             return "invalid string";
         }
 
@@ -19,8 +19,6 @@ public class StringUtil {
             isOdd = false;
             length = titleLength + 2;
         }
-        System.out.println(maxEachSideCount);
-        System.out.println(length);
         if (maxEachSideCount <= length / 2) {
 
             return "invalid maxOneSideCount";
@@ -33,20 +31,22 @@ public class StringUtil {
         stringBuilder.append(space);
         int oddOrEven = titleLength & 1;
         if (oddOrEven == 1) {
-            stringBuilder.append(space);
+            stringBuilder.append(separatorElement);
         }
 
         String appendedTitle = stringBuilder.toString();
 
         StringBuilder stringBuilder2 = new StringBuilder();
 
+        StringBuilder stringBuilder3 = new StringBuilder();
         for (int i = 0; i < maxEachSideCount - appendedTitle.length() / 2; i++) {
-            stringBuilder2.append(separatorElement);
+            stringBuilder3.append(separatorElement);
         }
+        String separator = stringBuilder3.toString();
+        stringBuilder2.append(separator);
         stringBuilder2.append(appendedTitle);
-        for (int i = 0; i < maxEachSideCount - appendedTitle.length() / 2; i++) {
-            stringBuilder2.append(separatorElement);
-        }
+        stringBuilder2.append(separator);
+
         return stringBuilder2.toString();
     }
 }
