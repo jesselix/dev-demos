@@ -78,14 +78,14 @@ public class StringUtil {
         stringBuilder.append(space);
 
         if (isOdd) {
-            stringBuilder.append(" ");
+            stringBuilder.append(space);
         }
 
         String appendedTitle = stringBuilder.toString();
 
         StringBuilder stringBuilder2 = new StringBuilder();
         for (int i = 0; i < maxEachSideCount - 1 - appendedTitle.length() / 2; i++) {
-            stringBuilder2.append(" ");
+            stringBuilder2.append(space);
         }
         String separator = stringBuilder2.toString();
 
