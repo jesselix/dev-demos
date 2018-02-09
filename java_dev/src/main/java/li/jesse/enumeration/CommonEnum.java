@@ -1,6 +1,6 @@
-package li.jesse.enums;
+package li.jesse.enumeration;
 
-public class SomeEnum {
+public class CommonEnum {
 
     public enum Color {
         RED,
