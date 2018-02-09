@@ -7,4 +7,10 @@ public class CommonEnum {
         GREEN,
         BLUE
     }
+
+    public enum Fruit {
+        APPLE,
+        ORANGE,
+        BANANA
+    }
 }
