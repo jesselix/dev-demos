@@ -8,7 +8,7 @@ public class AnonymousInnerClassThread {
         new Thread() {
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("thread: " + Thread.currentThread().getName() + "--"
+                    System.out.println("thread: " + Thread.currentThread().getName() + " -- "
                             + x);
                 }
             }
@@ -19,7 +19,7 @@ public class AnonymousInnerClassThread {
             @Override
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("runnable: " + Thread.currentThread().getName() + "--"
+                    System.out.println("runnable: " + Thread.currentThread().getName() + " -- "
                             + x);
                 }
             }
@@ -29,7 +29,7 @@ public class AnonymousInnerClassThread {
         // lambda
         new Thread(() ->{
             for (int x = 0; x < 5; x++) {
-                System.out.println("lambda: " + Thread.currentThread().getName() + "--"
+                System.out.println("lambda: " + Thread.currentThread().getName() + " -- "
                         + x);
             }}).start();
 
@@ -38,14 +38,14 @@ public class AnonymousInnerClassThread {
             @Override
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("mix: runnable" + "--" + x);
+                    System.out.println("mix: runnable" + " -- " + x);
                 }
 
             }
         }) {
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("mix: thread" + "--" + x);
+                    System.out.println("mix: thread" + " -- " + x);
                 }
             }
         }.start();
