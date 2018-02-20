@@ -19,7 +19,7 @@ public class TicketSellingThread extends Thread {
         }
     }
 
-    @Override
+//    @Override
     public void run() {
         while (ticketCount > 0) {
             sellTicket();
