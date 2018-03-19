@@ -36,6 +36,8 @@ public class HashMapTest {
 
         hashMap.clear();
 
+        System.out.println(hashMap.isEmpty() ? "hashMap is empty" : "hashMap is not empty");
+
         System.out.println(hashMap);
     }
 

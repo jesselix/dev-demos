@@ -34,5 +34,26 @@ public class TreeMapTest {
         System.out.println("contains value 0 : " + treeMap.containsValue(0));
 
         treeMap.remove("three");
+
+        System.out.println(treeMap);
+
+        treeMap.clear();
+
+        System.out.println(treeMap.isEmpty() ? "treeMap is empty" : "treeMap is not empty");
+
+        System.out.println(treeMap);
+    }
+
+    @Test
+    public void testSubMap() {
+        treeMap.put("a", 101);
+        treeMap.put("b", 102);
+        treeMap.put("c", 103);
+        treeMap.put("d", 104);
+        treeMap.put("e", 105);
+
+        System.out.println(treeMap);
+
+
     }
 }
