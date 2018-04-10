@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>li.jesse</groupId>
-    <artifactId>java_dev</artifactId>
+    <artifactId>java-dev-core</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
