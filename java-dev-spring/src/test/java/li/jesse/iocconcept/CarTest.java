@@ -1,5 +1,9 @@
 package li.jesse.iocconcept;
 
+import li.jesse.iocconcept.car.Car1;
+import li.jesse.iocconcept.car.Car2;
+import li.jesse.iocconcept.car.Chassis2;
+import li.jesse.iocconcept.car.Tire2;
 import org.junit.Test;
 
 public class CarTest {

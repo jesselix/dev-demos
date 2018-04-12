@@ -1,4 +1,4 @@
-package li.jesse.iocconcept;
+package li.jesse.iocconcept.car;
 
 public class Tire2 {
 
