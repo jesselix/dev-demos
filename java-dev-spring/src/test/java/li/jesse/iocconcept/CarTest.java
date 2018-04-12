@@ -1,4 +1,4 @@
-package li.jesse.ioc;
+package li.jesse.iocconcept;
 
 import org.junit.Test;
 
