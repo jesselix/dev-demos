@@ -1,4 +1,4 @@
-package li.jesse.iocconcept.texteditor;
+package li.jesse.ioc.texteditor;
 
 public class TextEditor {
 

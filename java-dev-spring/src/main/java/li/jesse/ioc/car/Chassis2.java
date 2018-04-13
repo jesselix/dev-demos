@@ -1,4 +1,4 @@
-package li.jesse.iocconcept.car;
+package li.jesse.ioc.car;
 
 public class Chassis2 {
 

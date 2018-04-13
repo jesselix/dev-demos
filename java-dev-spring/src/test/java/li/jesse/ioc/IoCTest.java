@@ -1,11 +1,10 @@
-package li.jesse.iocconcept;
+package li.jesse.ioc;
 
-import li.jesse.hello.HelloWorld;
-import li.jesse.iocconcept.car.Car1;
-import li.jesse.iocconcept.car.Car2;
-import li.jesse.iocconcept.car.Chassis2;
-import li.jesse.iocconcept.car.Tire2;
-import li.jesse.iocconcept.texteditor.TextEditor;
+import li.jesse.ioc.car.Car1;
+import li.jesse.ioc.car.Car2;
+import li.jesse.ioc.car.Chassis2;
+import li.jesse.ioc.car.Tire2;
+import li.jesse.ioc.texteditor.TextEditor;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
