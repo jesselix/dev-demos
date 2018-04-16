@@ -3,6 +3,7 @@ package li.jesse.ioc.texteditor;
 public class TextEditor {
 
     private SpellChecker spellChecker;
+
     public TextEditor(SpellChecker spellChecker) {
         System.out.println("Inside TextEditor constructor." );
         this.spellChecker = spellChecker;
