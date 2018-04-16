@@ -4,10 +4,17 @@ import li.jesse.ioc.car.Car1;
 import li.jesse.ioc.car.Car2;
 import li.jesse.ioc.car.Chassis2;
 import li.jesse.ioc.car.Tire2;
+import li.jesse.ioc.knight.BraveKnight;
+import li.jesse.ioc.knight.Knight;
+import li.jesse.ioc.knight.Quest;
 import li.jesse.ioc.texteditor.TextEditor;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class IoCTest {
 
@@ -32,6 +39,21 @@ public class IoCTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/Beans.xml");
         TextEditor textEditor = (TextEditor) context.getBean("textEditor");
         textEditor.spellCheck();
+    }
+
+    @Test
+    public void testKnight() {
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/knight.xml");
+//        Knight knight = context.getBean(Knight.class);
+//        knight.embarkOnQuest();
+//        BraveKnight knight2 = context.getBean(BraveKnight.class);
+//        knight2.embarkOnQuest();
+//        context.close();
+
+//        Quest mockQuest = mock(Quest.class);
+//        BraveKnight knight = new BraveKnight(mockQuest);
+//        knight.embarkOnQuest();
+//        verify(mockQuest, times(1)).embark();
     }
 
 }
