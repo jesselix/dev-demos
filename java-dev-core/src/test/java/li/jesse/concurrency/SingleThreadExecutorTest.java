@@ -7,6 +7,7 @@ public class SingleThreadExecutorTest
 {
     public static void main(String[] args) {
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+
         for (int i = 0; i < 10; i++) {
             final int index = i;
             singleThreadExecutor.execute(new Runnable() {

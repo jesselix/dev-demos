@@ -7,32 +7,27 @@ public class FixedThreadPoolTest
 {
     public static void main(String[] args)
     {
-        ExecutorService singleThreadExecutor = Executors.newCachedThreadPool();
-        for (int i = 0; i < 100; i++)
-        {
+        ExecutorService fixedThreadPool = Executors.newCachedThreadPool();
+
+        for (int i = 0; i < 100; i++) {
             final int index = i;
-            singleThreadExecutor.execute(new Runnable()
-            {
-                public void run()
-                {
-                    try
-                    {
-                        while(true)
-                        {
+
+            fixedThreadPool.execute(new Runnable() {
+                public void run() {
+                    try {
+                        while(true) {
                             System.out.println(index);
                             Thread.sleep(10 * 1000);
                         }
-                    } catch (InterruptedException e)
-                    {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             });
-            try
-            {
+
+            try {
                 Thread.sleep(500);
-            } catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

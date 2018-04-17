@@ -9,7 +9,7 @@ public class Student {
     }
 
     public void doTask() {
-        for(int m = 1; m<6; m++) {
+        for(int m = 1; m < 6; m++) {
             callback.taskResult(m + "是张三");
         }
     }

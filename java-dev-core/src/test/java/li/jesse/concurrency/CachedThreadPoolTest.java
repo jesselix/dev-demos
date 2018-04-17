@@ -11,18 +11,16 @@ public class CachedThreadPoolTest
     {
         ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
 
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             final int index = i;
-            try
-            {
+
+            try {
                 Thread.sleep(index * 1000);
-            } catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            cachedThreadPool.execute(new Runnable()
-            {
+
+            cachedThreadPool.execute(new Runnable() {
                 public void run() {
                     System.out.println(index);
                 }
