@@ -1,4 +1,4 @@
-package li.jesse.concurrency;
+package li.jesse.concurrency.atomic;
 
 public class ProcessingThread implements Runnable {
     private int count;

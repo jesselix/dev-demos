@@ -1,4 +1,4 @@
-package li.jesse.concurrency;
+package li.jesse.concurrency.atomic;
 
 public class AtomicTest {
 
