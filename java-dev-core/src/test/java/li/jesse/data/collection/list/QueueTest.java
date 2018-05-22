@@ -28,6 +28,9 @@ public class QueueTest {
         System.out.println();
         System.out.println(queue.peek());
         System.out.println(queue.element());
+        queue.poll();queue.poll();
+        System.out.println(queue.peek());
+
     }
 
 }
