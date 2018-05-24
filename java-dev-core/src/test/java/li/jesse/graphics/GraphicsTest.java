@@ -22,4 +22,17 @@ public class GraphicsTest {
         });
     }
 
+    @Test
+    public void testGraphics() {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // 创建窗口对象
+                MyFrame frame = new MyFrame();
+                // 显示窗口
+                frame.setVisible(true);
+            }
+        });
+    }
+
 }
