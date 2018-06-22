@@ -12,7 +12,6 @@ public class HashSetTest {
         for (int i = 0; i < 10; i++) {
             hashSet.add(i);
         }
-
     }
 
     public static void iteratorHashSet(HashSet set) {
@@ -21,4 +20,5 @@ public class HashSetTest {
             System.out.printf("iterator : %s\n", iterator.next());
         }
     }
+
 }

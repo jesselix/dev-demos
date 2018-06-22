@@ -29,11 +29,11 @@ public class GenericsTest {
         Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
         Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };
 
-        printArray( intArray);
+        printArray(intArray);
         System.out.println();
-        printArray( doubleArray);
+        printArray(doubleArray);
         System.out.println();
-        printArray( charArray);
+        printArray(charArray);
         System.out.println();
     }
 
