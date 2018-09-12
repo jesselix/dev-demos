@@ -11,20 +11,16 @@ import java.util.ArrayList;
 
 // http://www.cnblogs.com/lzq198754/p/5780331.html
 
-public class ReflectionTest implements Serializable
-{
-    // 通过一个对象获得完整包名和类名
+public class ReflectionTest implements Serializable {
+
     @Test
-    public void testGetPackageAndClassName()
-    {
+    public void testGetPackageNameAndClassName() {
         ReflectionTest reflectionTest = new ReflectionTest();
         System.out.println(reflectionTest.getClass().getName());
     }
 
-    // 实例化Class类对象
     @Test
-    public void testInstantClassObject() throws ClassNotFoundException
-    {
+    public void testInstantiateClassObject() throws ClassNotFoundException {
         Class<?> clazz1;
         Class<?> clazz2;
         Class<?> clazz3;
@@ -38,25 +34,26 @@ public class ReflectionTest implements Serializable
         System.out.println(clazz3.getName());
     }
 
-    // 获取一个对象的父类与实现的接口
     @Test
-    public void testGetTheParentClassAndInterfaceOfAnObject() throws ClassNotFoundException
-    {
+    public void testGetParentClassOfAnOjbect() throws ClassNotFoundException {
         Class<?> clazz = Class.forName("li.jesse.reflection.ReflectionTest");
         Class<?> parentClazz = clazz.getSuperclass();
         System.out.println(parentClazz.getName());
+    }
+
+    @Test
+    public void testGetInterfaceOfAnObject() throws ClassNotFoundException {
+        Class<?> clazz = Class.forName("li.jesse.reflection.ReflectionTest");
 
         Class<?> inters[] = clazz.getInterfaces();
-        for (int i = 0; i < inters.length; i++)
-        {
+        for (int i = 0; i < inters.length; i++) {
             System.out.println(i + ": " + inters[i].getName());
         }
     }
 
     // 通过反射机制实例化一个类的对象
     @Test
-    public void testReflection04() throws Exception
-    {
+    public void testReflection04() throws Exception {
         Class<?> clazz01 = Class.forName("li.jesse.entity.User");
 
         User user = (User) clazz01.newInstance();
@@ -86,8 +83,7 @@ public class ReflectionTest implements Serializable
 
     // 获取某个类的全部属性
     @Test
-    public void testReflection05() throws ClassNotFoundException
-    {
+    public void testReflection05() throws ClassNotFoundException {
         Class<?> clazz = Class.forName("li.jesse.entity.User");
 
         Field[] fields = clazz.getDeclaredFields();
@@ -103,8 +99,7 @@ public class ReflectionTest implements Serializable
 //        }
 
         Field[] filed1 = clazz.getFields();
-        for (int j = 0; j < filed1.length; j++)
-        {
+        for (int j = 0; j < filed1.length; j++) {
             int mo1 = filed1[j].getModifiers();
             String priv1 = Modifier.toString(mo1);
 
@@ -115,13 +110,11 @@ public class ReflectionTest implements Serializable
 
     // 获取某个类的全部方法
     @Test
-    public void testReflection06() throws ClassNotFoundException
-    {
+    public void testReflection06() throws ClassNotFoundException {
         Class<?> clazz = Class.forName("li.jesse.entity.User");
         Method methods[] = clazz.getMethods();
 
-        for (int i = 0; i < methods.length; i++)
-        {
+        for (int i = 0; i < methods.length; i++) {
             Class<?> returnType = methods[i].getReturnType();
             Class<?> paramTypes[] = methods[i].getParameterTypes();
             int temp = methods[i].getModifiers();
@@ -130,8 +123,7 @@ public class ReflectionTest implements Serializable
             System.out.println(returnType.getName());
             System.out.println(methods[i].getName());
 
-            for (int j = 0; j < paramTypes.length; j++)
-            {
+            for (int j = 0; j < paramTypes.length; j++) {
                 System.out.println(paramTypes[j].getName() + " " + j);
             }
         }
@@ -139,8 +131,7 @@ public class ReflectionTest implements Serializable
 
     // 通过反射机制调用某个类的方法
     @Test
-    public void testReflection07() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException
-    {
+    public void testReflection07() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
         Class<?> clazz = Class.forName("li.jesse.entity.User");
 
 //        Method method = clazz.getMethod("gogo");
@@ -152,8 +143,7 @@ public class ReflectionTest implements Serializable
 
     // 通过反射机制操作某个类的属性
     @Test
-    public void testReflection08() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException
-    {
+    public void testReflection08() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException {
         Class<?> clazz = Class.forName("li.jesse.entity.User");
         Object object = clazz.newInstance();
 
@@ -166,8 +156,7 @@ public class ReflectionTest implements Serializable
 
     // 在泛型为Integer的ArrayList中存放一个String类型的对象
     @Test
-    public void testReflectionA() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException
-    {
+    public void testReflectionA() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(100);
         list.add(101);
@@ -180,8 +169,7 @@ public class ReflectionTest implements Serializable
 
     // 通过反射取得并修改数组的信息
     @Test
-    public void testReflectionB()
-    {
+    public void testReflectionB() {
         int[] testArray = {0, 1, 2, 3, 4, 5};
 
         Class<?> clazz = testArray.getClass().getComponentType();
@@ -192,18 +180,15 @@ public class ReflectionTest implements Serializable
         System.out.println(Array.get(testArray, 0));
     }
 
-    public void testReflectionC()
-    {
+    public void testReflectionC() {
 
     }
 
     @Test
-    public void testReflectionD()
-    {
+    public void testReflectionD() {
         Animal animal = AnimalFactory.getInstance("li.jesse.entity.Monkey");
 
-        if (animal != null)
-        {
+        if (animal != null) {
             animal.eat();
         }
     }
