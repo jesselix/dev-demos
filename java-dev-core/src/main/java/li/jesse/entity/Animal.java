@@ -1,6 +1,5 @@
 package li.jesse.entity;
 
-public interface Animal
-{
+public interface Animal {
     void eat();
 }
