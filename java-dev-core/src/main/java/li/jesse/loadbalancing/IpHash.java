@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class Randomm {
+public class IpHash {
 
-    public static String getServer()
+    public static String getServer(String remoteIp)
     {
         // 重建一个Map，避免服务器的上下线导致的并发问题
         Map<String, Integer> serverMap = new HashMap<>();
@@ -18,9 +18,11 @@ public class Randomm {
         ArrayList<String> keyList = new ArrayList<String>();
         keyList.addAll(keySet);
 
-        java.util.Random random = new java.util.Random();
-        int randomPos = random.nextInt(keyList.size());
-
-        return keyList.get(randomPos);
+        // 在Web应用中可通过HttpServlet的getRemoteIp方法获取
+//        String remoteIp = "127.0.0.1";
+        int hashCode = remoteIp.hashCode();
+        int serverListSize = keyList.size();
+        int serverPos = hashCode % serverListSize;
+        return keyList.get(serverPos);
     }
 }

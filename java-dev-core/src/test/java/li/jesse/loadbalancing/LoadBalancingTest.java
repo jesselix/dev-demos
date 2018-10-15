@@ -2,26 +2,40 @@ package li.jesse.loadbalancing;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 public class LoadBalancingTest {
 
     @Test
     public void testRoundRobin() {
         RoundRobin robin = new RoundRobin();
-        for (int i = 0; i < 20; i++) {
-            String serverIp = robin.roundRobin();
+        for (int i = 0; i < IpMap.serverWeightMap.size(); i++) {
+            String serverIp = robin.getServer();
             System.out.println(serverIp);
         }
     }
 
     @Test
     public void testRandomm() {
-        String serverIp = Randomm.randomm();
+        String serverIp = Randomm.getServer();
         System.out.println(serverIp);
     }
 
+    @Test
+    public void testWeightRoundRobin() {
+//        for (int i = 0; i < IpMap.serverWeightMap.size(); i++) {
+//            String serverIp = WeightRoundRobin.getServer();
+//            System.out.println(serverIp);
+//        }
+    }
+
+    @Test
+    public void testWeightRandom() {
+        String serverIp = WeightRandom.getServer();
+        System.out.println(serverIp);
+    }
+
+    @Test
+    public void testIpHash() {
+//        String serverIp = IpHash.getServer("192.168.1.100");
+//        System.out.println(serverIp);
+    }
 }
