@@ -1,22 +1,20 @@
 package li.jesse.concurrency.atomic;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-public class AtomicTest {
+public class NonAtomicTest {
 
     private static class ProcessingThread implements Runnable {
-        private AtomicInteger count = new AtomicInteger();
+        private int count;
 
         @Override
         public void run() {
             for (int i = 1; i < 5; i++) {
                 processSomething(i);
-                count.incrementAndGet();
+                count++;
             }
         }
 
         public int getCount() {
-            return this.count.get();
+            return this.count;
         }
 
         private void processSomething(int i) {
@@ -30,7 +28,6 @@ public class AtomicTest {
     }
 
     public static void main(String[] args) throws InterruptedException {
-
         ProcessingThread pt = new ProcessingThread();
         Thread t1 = new Thread(pt, "t1");
         t1.start();
@@ -38,6 +35,6 @@ public class AtomicTest {
         t2.start();
         t1.join();
         t2.join();
-        System.out.println("Atomic Processing count = " + pt.getCount());
+        System.out.println("Non-Atomic Processing count = " + pt.getCount());
     }
 }
