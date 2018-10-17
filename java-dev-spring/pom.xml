@@ -17,7 +17,7 @@
         <maven.compiler.source>1.9</maven.compiler.source>
         <maven.compiler.target>1.9</maven.compiler.target>
 
-        <org.springframework.version>5.0.5.RELEASE</org.springframework.version>
+        <org.springframework.version>5.1.1.RELEASE</org.springframework.version>
     </properties>
 
     <dependencies>
