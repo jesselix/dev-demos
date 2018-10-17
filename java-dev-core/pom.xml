@@ -22,7 +22,7 @@
     </dependencies>
 
     <build>
-        <finalName>java_dev</finalName>
+        <finalName>java-dev</finalName>
 
         <plugins>
             <plugin>
