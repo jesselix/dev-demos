@@ -13,8 +13,7 @@ public class SerialTest
     private String file = "c:\\xx\\obj.dat";
 
     @Test
-    public void testSerial() throws Exception
-    {
+    public void testSerial() throws Exception {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
 
         User user = new User("Andy", 11);
@@ -24,8 +23,7 @@ public class SerialTest
     }
 
     @Test
-    public void testSerial1() throws Exception
-    {
+    public void testSerial1() throws Exception {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
         User user = (User)ois.readObject();
         System.out.println(user);
