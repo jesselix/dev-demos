@@ -14,8 +14,8 @@ public class HashSetTest {
     public void testCheckInsert() {
         Set<Person> set = new HashSet<>();
 
-        Person p1 = new Person("Andy", 1983);
-        Person p2 = new Person("Andy", 1983);
+        Person p1 = new Person("Andy", 1984);
+        Person p2 = new Person("Andy", 1984);
 
         System.out.println(p1.hashCode());
         System.out.println(p2.hashCode());
