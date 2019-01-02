@@ -1,4 +1,4 @@
 # Java Dev
-Java Development Knowledge and Utilities
+Java Development Knowledge
 
 GitBook: https://jesselix.gitbooks.io/java-dev/
