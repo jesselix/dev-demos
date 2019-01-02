@@ -21,11 +21,11 @@ public class HashtableTest {
         Iterator iter = hashtable.entrySet().iterator();
         while(iter.hasNext()) {
             Map.Entry entry = (Map.Entry)iter.next();
-            System.out.println("next : "+ entry.getKey() +" - "+entry.getValue());
+            System.out.println("next : " + entry.getKey() + " - " + entry.getValue());
         }
 
         System.out.println(hashtable.size());
 
-        System.out.println("contains key two : "+hashtable.containsKey("two"));
+        System.out.println("contains key two : " + hashtable.containsKey("two"));
     }
 }
