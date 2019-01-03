@@ -1,4 +1,4 @@
-package li.jesse.data.collection.list;
+package li.jesse.javadevdatastructures.collection.list;
 
 import org.junit.Test;
 
@@ -32,5 +32,4 @@ public class QueueTest {
         System.out.println(queue.peek());
 
     }
-
 }
