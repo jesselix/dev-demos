@@ -1,9 +1,10 @@
-package li.jesse.concurrency;
+package li.jesse.javadevconcurrency.thread;
 
-public class TicketSellingThread extends Thread {
+public class TicketSellingRunnable implements Runnable {
 
     private int ticketCount = 100;
     private Object mutex = new Object();
+//    private Lock lock = new ReentrantLock();
 
     public void sellTicket() {
         synchronized (mutex) {
@@ -19,7 +20,21 @@ public class TicketSellingThread extends Thread {
         }
     }
 
-//    @Override
+//    public void sellTicket2() {
+//        lock.lock();
+//            if (ticketCount > 0) {
+//                ticketCount--;
+//                System.out.println(Thread.currentThread().getName()
+//                        + "正在卖票,还剩" + ticketCount + "张票");
+//            }
+//            else {
+//                System.out.println("票已经卖完！");
+//                return;
+//            }
+//        lock.unlock();
+//    }
+
+    @Override
     public void run() {
         while (ticketCount > 0) {
             sellTicket();

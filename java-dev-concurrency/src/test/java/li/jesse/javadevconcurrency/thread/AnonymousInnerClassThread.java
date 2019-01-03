@@ -1,4 +1,4 @@
-package li.jesse.concurrency;
+package li.jesse.javadevconcurrency.thread;
 
 public class AnonymousInnerClassThread {
 
