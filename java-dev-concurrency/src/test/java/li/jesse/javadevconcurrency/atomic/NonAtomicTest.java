@@ -1,4 +1,4 @@
-package li.jesse.concurrency.atomic;
+package li.jesse.javadevconcurrency.atomic;
 
 public class NonAtomicTest {
 

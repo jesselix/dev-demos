@@ -1,4 +1,4 @@
-package li.jesse.concurrency;
+package li.jesse.javadevconcurrency.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

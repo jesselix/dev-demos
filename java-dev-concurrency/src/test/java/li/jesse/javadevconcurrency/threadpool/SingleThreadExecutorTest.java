@@ -1,16 +1,16 @@
-package li.jesse.concurrency;
+package li.jesse.javadevconcurrency.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class FixedThreadPoolTest {
+public class SingleThreadExecutorTest {
 
-    public static void main(String[] args)
-    {
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+    public static void main(String[] args) {
+        ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+
         for (int i = 0; i < 10; i++) {
             final int index = i;
-            fixedThreadPool.execute(new Runnable() {
+            singleThreadExecutor.execute(new Runnable() {
                 public void run() {
                     try {
                         System.out.println(index);
