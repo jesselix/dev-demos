@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.Vector;
 
+
 public class VectorTest {
 
     private Vector vector1 = new Vector();
@@ -25,6 +26,7 @@ public class VectorTest {
 
         System.out.println(vector1.indexOf("100"));
         System.out.println(vector1.lastIndexOf("100"));
-
     }
+
+
 }
