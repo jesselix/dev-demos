@@ -1,6 +1,6 @@
 package li.jesse.javadevdatastructures.collection.set;
 
-import li.jesse.javadevbasics.entity.Person;
+import li.jesse.javadevdatastructures.entity.Person;
 import org.junit.Test;
 
 import java.util.LinkedHashSet;

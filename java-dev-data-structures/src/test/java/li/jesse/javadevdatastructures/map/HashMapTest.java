@@ -12,9 +12,7 @@ public class HashMapTest {
 
     @Test
     public void testHashMap() {
-        hashMap.put("one", 10);
-        hashMap.put("two", 20);
-        hashMap.put("three", 30);
+
 
         System.out.println(hashMap);
 
@@ -31,5 +29,20 @@ public class HashMapTest {
 
         hashMap.clear();
         System.out.println("is empty: " + hashMap.isEmpty());
+    }
+
+    @Test
+    public void testSet() {
+        hashMap.put("one", 10);
+        hashMap.put("two", 20);
+        hashMap.put("three", 30);
+
+        System.out.println(hashMap.keySet());
+        System.out.println(hashMap.entrySet());
+
+        Iterator iterator = hashMap.values().iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 }
