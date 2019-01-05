@@ -7,8 +7,6 @@ import java.util.concurrent.CountDownLatch;
 
 public class ArrayListTest {
 
-
-
     public static void main(String[] args) {
 
         long startTime = System.currentTimeMillis();
