@@ -1,14 +1,14 @@
 package li.jesse.javadevbasics.entity;
 
-public class Student02 {
+public class Student {
 
     private String name;
     private int age;
 
-    public Student02() {
+    public Student() {
     }
 
-    public Student02(String name, int age) {
+    public Student(String name, int age) {
         this.name = name;
         this.age = age;
     }

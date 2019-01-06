@@ -1,14 +1,14 @@
 package li.jesse.javadevbasics.function;
 
-import li.jesse.javadevbasics.entity.Student02;
+import li.jesse.javadevbasics.entity.Student;
 
 import java.util.Comparator;
 
-public class MyComparerDemo implements Comparator<Student02> {
+public class MyComparerDemo implements Comparator<Student> {
 
 
     @Override
-    public int compare(Student02 o1, Student02 o2) {
+    public int compare(Student o1, Student o2) {
         if(o1.getName().length()>o2.getName().length())
             return 1;
 
