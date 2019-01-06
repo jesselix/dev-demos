@@ -4,13 +4,13 @@ import org.junit.Test;
 
 public class StringTest {
 
-    @Test
-    public void testString() {
-        String str1 = "abc";
-        String str2 = "abc";
-        String str3 = new String("abc");
-        String str4 = new String("abc");
+    String str1 = "abc";
+    String str2 = "abc";
+    String str3 = new String("abc");
+    String str4 = new String("abc");
 
+    @Test
+    public void testStringPool() {
         System.out.println(System.identityHashCode(str1));
         System.out.println(System.identityHashCode(str2));
         System.out.println(System.identityHashCode(str3));
@@ -19,5 +19,11 @@ public class StringTest {
         System.out.println(str1 == str2);
         System.out.println(str1 == str3);
         System.out.println(str3 == str4);
+    }
+
+    @Test
+    public void testStringComparison() {
+        System.out.println(str1.equals(str3));
+        System.out.println(str2.compareTo(str1));
     }
 }
