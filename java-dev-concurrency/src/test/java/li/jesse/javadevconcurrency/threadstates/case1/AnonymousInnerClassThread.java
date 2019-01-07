@@ -1,14 +1,14 @@
-package li.jesse.javadevconcurrency.thread;
+package li.jesse.javadevconcurrency.threadstates.case1;
 
 public class AnonymousInnerClassThread {
 
     public static void main(String[] args) {
 
-        // thread
+        // threadstates
         new Thread() {
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("thread: " + Thread.currentThread().getName() + " -- " + x);
+                    System.out.println("threadstates: " + Thread.currentThread().getName() + " -- " + x);
                 }
             }
         }.start();
@@ -30,7 +30,7 @@ public class AnonymousInnerClassThread {
                 System.out.println("lambda: " + Thread.currentThread().getName() + " -- " + x);
             }}).start();
 
-        // thread + runnable
+        // threadstates + runnable
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -41,7 +41,7 @@ public class AnonymousInnerClassThread {
         }) {
             public void run() {
                 for (int x = 0; x < 5; x++) {
-                    System.out.println("mix: thread" + " -- " + x);
+                    System.out.println("mix: threadstates" + " -- " + x);
                 }
             }
         }.start();

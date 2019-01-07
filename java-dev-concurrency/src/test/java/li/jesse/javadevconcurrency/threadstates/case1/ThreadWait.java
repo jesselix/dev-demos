@@ -1,4 +1,4 @@
-package li.jesse.javadevconcurrency.thread;
+package li.jesse.javadevconcurrency.threadstates.case1;
 
 public class ThreadWait {
 
