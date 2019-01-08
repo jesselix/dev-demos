@@ -8,6 +8,7 @@ public class Employee implements Serializable {
     private int employeeId;
     private String name;
     transient private BigDecimal salary;
+    private String password;
 
     public int getEmployeeId() {
         return employeeId;
@@ -32,6 +33,14 @@ public class Employee implements Serializable {
     public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
+
+//    public String getPassword() {
+//		return password;
+//	}
+//
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
 
     @Override
     public String toString() {

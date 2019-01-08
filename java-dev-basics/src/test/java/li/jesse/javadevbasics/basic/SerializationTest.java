@@ -9,9 +9,11 @@ import java.math.BigDecimal;
 
 public class SerializationTest {
 
+    String fileName = "C:\\xx\\employee.ser";
+
     @Test
     public void testSerialization() {
-        String fileName = "C:\\xx\\employee.ser";
+
         Employee emp = new Employee();
         emp.setEmployeeId(100);
         emp.setName("Pankaj");
@@ -33,5 +35,19 @@ public class SerializationTest {
 
         System.out.println(emp);
         System.out.println(empNew);
+    }
+
+    @Test
+    public void testSerialVersionUID() {
+        Employee empNew = null;
+
+        try {
+            empNew = (Employee) SerializationUtil.deserialize(fileName);
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("empNew Object::"+empNew);
+
     }
 }
