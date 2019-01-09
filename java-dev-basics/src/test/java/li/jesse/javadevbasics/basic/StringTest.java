@@ -49,4 +49,17 @@ public class StringTest
         System.out.println(a == d); // true
         System.out.println(c == d); // false
     }
+
+    @Test
+    public void testStringPool() {
+        String s1 = new String("A");
+        System.out.println(s1 == s1.intern()); // false
+
+        String s2 = new String("A") + new String("B");
+        System.out.println(s2 == s2.intern()); // true
+
+        String ss2 = "AB";
+        String ss1 = new String("A") + new String("B");
+        System.out.println(ss1 == ss1.intern()); // false
+    }
 }

@@ -48,6 +48,5 @@ public class SerializationTest {
         }
 
         System.out.println("empNew Object::"+empNew);
-
     }
 }
