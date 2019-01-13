@@ -62,4 +62,13 @@ public class StringTest
         String ss1 = new String("A") + new String("B");
         System.out.println(ss1 == ss1.intern()); // false
     }
+
+    @Test
+    public void testGo() {
+        String a1 = "abc";
+        String a2 = "abc";
+
+        System.out.println(a1.hashCode());
+        System.out.println(a2.hashCode());
+    }
 }
