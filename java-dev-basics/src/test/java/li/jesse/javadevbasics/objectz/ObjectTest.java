@@ -7,10 +7,10 @@ public class ObjectTest {
 
     @Test
     public void testObject() {
-        Panda panda1 = new Panda();
-        Panda panda2 = new Panda();
-
-        System.out.println(panda1.hashCode());
-        System.out.println(panda2.hashCode());
+//        Panda panda1 = new Panda();
+//        Panda panda2 = new Panda();
+//
+//        System.out.println(panda1.hashCode());
+//        System.out.println(panda2.hashCode());
     }
 }
