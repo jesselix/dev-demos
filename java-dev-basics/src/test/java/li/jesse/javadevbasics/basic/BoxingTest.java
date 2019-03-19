@@ -22,4 +22,14 @@ public class BoxingTest {
         System.out.println(i7 == i8);  // true
         System.out.println(i9 == i10); // false
     }
+
+    @Test
+    public void testDoubleBoxing() {
+        Double d1 = 100.0;
+        Double d2 = 100.0;
+        Double d3 = 200.0;
+        Double d4 = 200.0;
+        System.out.println(d1 == d2);
+        System.out.println(d3 == d4);
+    }
 }
