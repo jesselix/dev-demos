@@ -1,5 +1,8 @@
 package li.jesse.javadevdatastructures.collection.list;
 
+import org.junit.Test;
+
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -19,6 +22,36 @@ public class ArrayListTest {
 
         System.out.println("总共用时" + (System.currentTimeMillis() - startTime) + "ms");
     }
+
+    public static Integer getCapacity(ArrayList list) {
+        Integer length = null;
+        Class c = list.getClass();
+        Field f;
+        try {
+            f = c.getDeclaredField("elementData");
+            f.setAccessible(true);
+            Object[] o = (Object[]) f.get(list);
+            length = o.length;
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return  length;
+    }
+
+    @Test
+    public void testCapacity() {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 16; i++) {
+            list.add(i);
+        }
+
+        Integer length = getCapacity(list);
+        System.out.println(list.size());
+        System.out.println(length);
+    }
+
 
     public static void test()
     {
