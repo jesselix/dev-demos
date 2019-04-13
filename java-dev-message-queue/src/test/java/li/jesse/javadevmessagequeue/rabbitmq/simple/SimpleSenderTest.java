@@ -1,33 +1,27 @@
-package li.jesse.javadevmessagequeue.rabbitmq;
+package li.jesse.javadevmessagequeue.rabbitmq.simple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-
 @Component
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MqSenderTest {
-
-    // http://127.0.0.1:15672
+public class SimpleSenderTest {
 
     @Autowired
-    private AmqpTemplate amqpTemplate;
+    private RabbitTemplate template;
 
     @Test
     public void send() {
-        amqpTemplate.convertAndSend("myQueue", "now " + new Date());
-    }
-
-
-    public void send1() {
-
+        String message = "hello world";
+        template.convertAndSend("ww", message);
+        System.out.println("sent...");
     }
 
 }
