@@ -40,7 +40,7 @@ public class EqualTest {
         if (s1.equals(s2)) {
             System.out.println("equal");
         } else {
-            System.out.println("note equal");
+            System.out.println("not equal");
         }
     }
 }
