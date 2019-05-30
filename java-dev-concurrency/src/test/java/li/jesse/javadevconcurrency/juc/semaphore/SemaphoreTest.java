@@ -21,7 +21,6 @@ public class SemaphoreTest {
                 } finally {
                     semaphore.release();
                 }
-
             }, String.valueOf(i)).start();
         }
     }
