@@ -10,6 +10,23 @@ import java.util.concurrent.CountDownLatch;
 
 public class ArrayListTest {
 
+    @Test
+    public void testCapacityWithNull() {
+        ArrayList<Integer> list = new ArrayList<>();
+        System.out.println("begin: " + list.size());
+
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        System.out.println("added 10 elements: " + list.size() + " " + getCapacity(list));
+
+        list.add(11);
+        System.out.println("added 11 elements: " + list.size() + " " + getCapacity(list));
+
+        list.add(null);
+        System.out.println("added null elements: " + list.size() + " " + getCapacity(list));
+    }
+
     public static void main(String[] args) {
 
         long startTime = System.currentTimeMillis();
