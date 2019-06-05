@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.io.*;
 
-public class Serialization1Test {
+public class SerializationTest {
 
     @Test
     public void testSerial() throws IOException {
