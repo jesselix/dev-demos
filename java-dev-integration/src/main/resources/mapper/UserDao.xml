@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="li.jesse.javadevintegration.dao.UserDao">
-    <resultMap id="BaseResultMap" type="com.mmall.pojo.User" >
+
+    <resultMap id="BaseResultMap" type="li.jesse.javadevintegration.pojo.User" >
         <constructor >
             <idArg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
             <arg column="user_name" jdbcType="VARCHAR" javaType="java.lang.String" />
@@ -29,5 +30,7 @@
         where
             user_id = #{userId}
     </select>
-</mapper>
 
+
+
+</mapper>

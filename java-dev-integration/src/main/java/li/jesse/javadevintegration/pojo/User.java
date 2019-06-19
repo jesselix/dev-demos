@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class User {
 
-    private long userId;
+    private Long userId;
 
     private String userName;
 
@@ -20,7 +20,7 @@ public class User {
 
     private Date updateTime;
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
@@ -81,6 +81,20 @@ public class User {
     }
 
     public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public User() {
+    }
+
+    public User(Long userId, String userName, String password, String mobile, String email, Integer role, Date createTime, Date updateTime) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.mobile = mobile;
+        this.email = email;
+        this.role = role;
+        this.createTime = createTime;
         this.updateTime = updateTime;
     }
 

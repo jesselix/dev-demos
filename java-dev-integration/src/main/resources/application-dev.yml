@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.31.182:3306/demo_db
+    username: test
+    password: test123
+
+mybatis:
+  mapper-locations: classpath:mapper/*Dao.xml
+  type-aliases-package: li.jesse.pojo
+  configuration:
+    map-underscore-to-camel-case: true

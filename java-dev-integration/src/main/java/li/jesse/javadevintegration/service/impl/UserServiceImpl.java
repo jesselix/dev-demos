@@ -6,7 +6,7 @@ import li.jesse.javadevintegration.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -15,6 +15,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void getInformation(Long userId) {
         User user = userDao.queryByUserId(userId);
-        System.out.println(user.getUserId());
+        System.out.println(user.getUserName());
     }
 }
