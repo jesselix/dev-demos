@@ -3,7 +3,7 @@ spring:
     active: dev
   redis:
     database: 0
-    host:
+    host: 192.168.52.128
     port: 6379
     password: www
     timeout: 0
