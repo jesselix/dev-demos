@@ -14,8 +14,9 @@ public class UserController {
 
     @RequestMapping(value = "get_information", method = RequestMethod.GET)
     @ResponseBody
-    public void getUserInfo() {
+    public String getUserInfo() {
         Long id = 6171920391208960L;
         userService.getInformation(id);
+        return "ok";
     }
 }

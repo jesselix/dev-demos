@@ -4,6 +4,16 @@ spring:
     url: jdbc:mysql://192.168.52.128:3306/demo_db
     username: test
     password: test123
+  redis:
+    database: 0
+    host: 192.168.52.128
+    port: 6379
+    password: www
+    timeout: 0
+  security:
+    user:
+      name: user1
+      password: user1
 
 mybatis:
   mapper-locations: classpath:mapper/*Dao.xml
