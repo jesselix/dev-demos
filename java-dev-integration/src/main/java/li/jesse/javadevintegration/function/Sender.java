@@ -14,7 +14,7 @@ public class Sender {
 
     public void send() throws Exception {
         String context = "hello" + new Date();
-        System.out.println("Sender:"+context);
-        this.amqpTemplate.convertAndSend("hello",context);
+        System.out.println("Sender:" + context);
+        this.amqpTemplate.convertAndSend("hello", context);
     }
 }
