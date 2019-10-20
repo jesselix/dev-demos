@@ -14,6 +14,13 @@ spring:
     user:
       name: user1
       password: user1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
 
 mybatis:
   mapper-locations: classpath:mapper/*Dao.xml
