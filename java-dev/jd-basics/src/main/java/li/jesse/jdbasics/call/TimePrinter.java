@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class TimePrinter implements ActionListener {
 
-    @Override
+//    @Override
     public void actionPerformed(ActionEvent e) {
         Date now = new Date();
         System.out.println("Now time is " + now);
