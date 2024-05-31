@@ -1,2 +1,2 @@
-# Java Dev
-Java Development Knowledge
+# Dev Demos
+Development Knowledge
